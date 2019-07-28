@@ -16,6 +16,7 @@ function playRound(playerSelection, computerSelection) {
         console.log("Draw! I can't believe!");
         console.log("Let's try again!");
         console.log("------------------------")
+        btnElement.onclick();
     } else if ( playerSelection == "Rock" && computerSelection == "Paper" || 
                 playerSelection == "Paper" && computerSelection == "Scissor" ||
                 playerSelection == "Scissor" && computerSelection == "Rock") {
