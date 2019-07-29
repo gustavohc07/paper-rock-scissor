@@ -13,4 +13,5 @@ Doubts & Answers (It is a note for myself, don't need to read it):
         let random = Math.floor(Math.random() * anyVar.length)
         return anyVar[random]
 
-    - How to get the button input to be an output of a function?
+Time to complete task first part: 383 min (6h and 23min)
+Time to complete second part(layout, buttons...) - Not working on it yet!
