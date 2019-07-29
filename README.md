@@ -14,4 +14,5 @@ Doubts & Answers (It is a note for myself, don't need to read it):
         return anyVar[random]
 
 Time to complete task first part: 383 min (6h and 23min)
+
 Time to complete second part(layout, buttons...) - Not working on it yet!
