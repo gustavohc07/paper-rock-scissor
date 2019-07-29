@@ -25,7 +25,6 @@ function playRound(playerSelection, computerSelection) {
         console.log("Draw! I can't believe!");
         console.log("Let's try again!");
         console.log("------------------------");
-        btnElement.onclick();
     } else if ( playerSelection == "Rock" && computerSelection == "Paper" || 
                 playerSelection == "Paper" && computerSelection == "Scissor" ||
                 playerSelection == "Scissor" && computerSelection == "Rock") {
@@ -33,11 +32,17 @@ function playRound(playerSelection, computerSelection) {
         console.log("I told you cannot win!");
         console.log("------------------------");
         numberLose += 1;
-    } else {
+    } else if ( playerSelection == "Rock" && computerSelection == "Scissor" || 
+                playerSelection == "Paper" && computerSelection == "Rock" ||
+                playerSelection == "Scissor" && computerSelection == "Paper") {
         console.log("You win!");
         console.log("What? No! It can't be...");
         console.log("------------------------");
         numberWin += 1;
+    } else {
+        console.log("Hahahahaha you don't even know how to play!");
+        console.log("How pathetic...");
+        console.log("------------------------");
     }
 }
 
@@ -45,9 +50,18 @@ function playRound(playerSelection, computerSelection) {
 // Who gets 5 first wins.
 
 function game(playerSelection, computerSelection) {
-    playRound(playerSelection, computerSelection);
-    while (numberLose < 2 && numberWin < 2) {
-        btnElement.onclick();
+    if (playerSelection == !"" || playerSelection == !null) {
+        // console.log("Yes! Run away coward!");
+        return restart();
+    } else {
+        playRound(playerSelection, computerSelection);
+        while (numberLose < 5 && numberWin < 5) {
+            btnElement.onclick();
+            return;
+        }
+        console.log("Player: " + numberWin + "\n" + "Computer: " + numberLose);
+        (numberLose > numberWin) ? console.log("You were destroyed...") : console.log("You... win?! HOW?");
+        return restart();
     }
 }
 
@@ -57,7 +71,6 @@ function restart() {
     round = 0;
     numberWin = 0;
     numberLose = 0;
-    console.log(" ")
     console.log("________________________")
     console.log(" ")
 }
@@ -68,27 +81,23 @@ let btnElement = document.querySelector('button');
 
 btnElement.onclick = function getPlayerChoiceAndPlay() {
     let playerChoice = prompt("Choose Rock, Scissor or Paper!", "You can't beat me.");
-    if (playerChoice === "" || playerChoice === null) {
-        alert("Yes! Run away coward!");
-        restart();
-        return;
-    }
-    playerChoice = playerChoice.toLowerCase();
-    if (playerChoice == "rock") {
-        playerChoice = "Rock";
-    } else if (playerChoice == "paper") {
-        playerChoice = "Paper";
-    } else if (playerChoice == "scissor") {
-        playerChoice = "Scissor";
+    if (playerChoice == "" || playerChoice == null) {
+        console.log("Yes! Run away coward!");
+        return restart();
     } else {
-        alert("This is not a valid weapon!");
-        return;
-    };
+        playerChoice = playerChoice.toLowerCase();
+        if (playerChoice == "rock") {
+            playerChoice = "Rock";
+        } else if (playerChoice == "paper") {
+            playerChoice = "Paper";
+        } else if (playerChoice == "scissor") {
+            playerChoice = "Scissor";
+        } else {
+            console.log("This is not a valid weapon!");
+        };
+    } 
     roundUp();
     console.log("Round: " + round);
     game(playerChoice, computerPlay());
+    return;
 }
-
-// (numberLose > numberWin) ? console.log("You were destroyed...") : console.log("You... win?! HOW?");
-
-
