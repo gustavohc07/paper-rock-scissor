@@ -55,7 +55,7 @@ function game(playerSelection, computerSelection) {
         return restart();
     } else {
         playRound(playerSelection, computerSelection);
-        while (numberLose < 5 && numberWin < 5) {
+        while (numberLose < 3 && numberWin < 3) {
             btnElement.onclick();
             return;
         }
