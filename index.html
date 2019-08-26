@@ -1,14 +1,27 @@
 <!DOCTYPE html>
+
 <head>
     <title>Jokenpo!</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <section class="container">
-        <h1>Rock, Scissor and Paper!</h1>
-        <div>
-            <button>I don't think you can beat me!</button>
+
+<body class="main">
+    <section class="main__container">
+        <h1 class="container__title">Rock, Scissor and Paper!</h1>
+        <div class="intro">
+            <p class="intro__text">A simple browser game where you can pass your time. Try to beat the naughty computer!</p><br>
         </div>
+        <!-- <div>
+            <button>I don't think you can beat me!</button>
+        </div> -->
+        <div class="enterinfo">
+            <form class="enterinfo__form">
+                <input class="form__text" type="text" name="fname" placeholder="Enter your name">
+                <input class="form__submit" type="submit" name="submitBtn" value="You can't beat me!">
+                <input class="form__reset" type="reset" name="resetBtn" value="Reset">
+            </form>
+        </div>
+        <div class="playername"></div>
     </section>
     <script src="main.js"></script>
 </body>

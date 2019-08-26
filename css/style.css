@@ -1,0 +1,159 @@
+.main {
+    background-color: #FFDCA3;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+.intro__text {
+    margin: 2rem;
+}
+
+.main__container {
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.form__text, .form__submit, .form__reset {
+    padding: 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.playername__intimidation {
+    text-align: center;
+    color: #404040;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+}
+
+.game__container {
+    display: flex;
+}
+
+.game__header {
+    display: inline-flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin: 0 0 1em 0;
+    font-size: 1.5em;
+}
+
+
+.header__user, .header__rounds, .header__computer {
+    margin: 0 1em;
+    flex-shrink: 4;
+}
+ 
+/* Game options */
+
+.options__computer--color {
+    background-color: #F5B3C5
+}
+
+.options__player--color {
+    background-color: #ACF2E2
+}
+
+.options__player {
+    border-radius: 0 1em 1em 0;
+}
+
+.options__computer {
+    border-radius: 1em 0 0 1em;
+}
+
+.options__rounds {
+    font-weight: bold;
+    font-size: 2vh;
+    margin: 0 1em;
+    align-self: center;
+}
+
+
+.options__player, .options__computer {
+    padding: 0.5em 1em;
+    width: 100vw;
+    height: 20%;
+}
+
+.game__options, .options__player, .options__computer{
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.paper-computer {
+    order: 4;
+}
+
+.rock-computer {
+    order: 2;
+}
+
+.paper, .rock, .scissor {
+    height: 90%;
+    width: 25%;
+    opacity: 0.5;
+}
+
+.paper-computer, .rock-computer, .scissor-computer {
+    height: 90%;
+    width: 25%;
+    opacity: 0.5;
+    transform: scaleX(-1);
+}
+
+.paper:hover, .rock:hover, .scissor:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.player__choice {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.computer__choice {
+    opacity: 1;
+    transform: scaleX(-1);
+}
+
+
+/* Game Result */
+
+.game__result {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    align-self: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.result__para {
+    margin: 0;
+}
+
+.game__temp-result {
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0 1em 0 1em;
+    font-size: 1.5em;
+}
+
+/* Game Reset Button */
+
+.game__reset {
+    margin-top: 3em;
+    align-self: center;
+    font-size: 1em;
+    font-weight: bold;
+}
