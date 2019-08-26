@@ -1,7 +1,9 @@
 # paper-rock-scissor
 TOP First Js Project
 
-If you want to test it out, just inspect the page and open the console! For now, all outputs will be listed there.
+Game is complete. Just open the page and you will be able to play.
+
+My code could be much smaller if I just created the divs in my HTML document but I wanted to improve my DOM manipulation skills. Hope you guys like it and enjoy the game!
 
 Doubts & Answers (It is a note for myself, don't need to read it):
 
@@ -15,4 +17,5 @@ Doubts & Answers (It is a note for myself, don't need to read it):
 
 Time to complete task first part: 383 min (6h and 23min)
 
-Time to complete second part(layout, buttons...) - Not working on it yet!
+Time to complete second part(layout, buttons...): 610 min (10h and 10min)
+ 
